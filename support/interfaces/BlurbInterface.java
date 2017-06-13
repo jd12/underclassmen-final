@@ -1,3 +1,4 @@
+package interfaces;
 public interface BlurbInterface {
 	
 	
@@ -9,7 +10,7 @@ public interface BlurbInterface {
 	 * This method should be recursive
 	 * @return a valid Blurb
 	 */
-	public String BlurbGenerator();
+	public String generateBlurb();
 	
 	/**
 	 * Determines if {@code blurb} is a valid blurb as defined by {@code BlurbGenerator}
