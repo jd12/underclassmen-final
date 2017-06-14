@@ -36,6 +36,25 @@ public class CapitalGainsInterfaceTest {
 		assertEquals(-499, capitalGains.sell(100, 0.01), 0.001);
 	}
 	
+	@Test (timeout = 500, expected = NotEnoughStockException.class)
+	public void testExceptionOnEmptyCapitalGains() {
+		capitalGains.sell(100, 25.00);
+	}
+	
+	@Test (timeout = 500, expected = NotEnoughStockException.class)
+	public void testExceptionOnNotEnoughStock() {
+		capitalGains.buy(100, 50.00);
+		capitalGains.sell(150, 50.00);
+	}
+	
+	@Test (timeout = 500, expected = NotEnoughStockException.class)
+	public void testExceptionOnNotEnoughStock2() {
+		capitalGains.buy(100, 50.00);
+		capitalGains.buy(50, 20.00);
+		capitalGains.buy(200, 10);
+		capitalGains.sell(500, 75.00);
+	}
+	
 	@Test
 	public void testTwoBuysOneSell() {
 		assertEquals("Newly constructed capital gains object should start at day 0", 0, capitalGains.getDay());
