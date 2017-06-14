@@ -66,13 +66,13 @@ public class BlurbInterfaceTest {
 	
 	@Test
 	public void testBlurbGenerator() {
-		Set<Integer> blurbLengths = new HashSet<Integer>();
+		Set<String> blurbLengths = new HashSet<String>();
 		for(int i =0; i < 1000000; i++) {
 			String testBlurb = blurb.generateBlurb();
 			assertTrue("Generated " + testBlurb + " which is not a valid blurb", blurb.isBlurb(testBlurb));
-			blurbLengths.add(testBlurb.length());
+			blurbLengths.add(testBlurb);
 		}
-		assertTrue("Not enough variation in your string lengths", blurbLengths.size() > 10000);
+		assertTrue("Not enough variation in your string lengths", blurbLengths.size() > 200000);
 	}
 
 }
