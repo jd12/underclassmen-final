@@ -60,7 +60,7 @@ public class CapitalGainsInterfaceTest {
 		assertEquals("Newly constructed capital gains object should start at day 0", 0, capitalGains.getDay());
 		capitalGains.buy(100, 50.00);
 		capitalGains.buy(100, 55.00);
-		assertEquals(1500, capitalGains.sell(150, 60.00), 0.0001);
+		assertEquals(1250, capitalGains.sell(150, 60.00), 0.0001);
 	}
 	
 	@Test
