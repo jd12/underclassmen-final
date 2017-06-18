@@ -1,4 +1,4 @@
-package interfaces;
+package blurb;
 
 import static org.junit.Assert.*;
 
@@ -8,6 +8,7 @@ import java.util.Set;
 import org.junit.Before;
 import org.junit.Test;
 
+import blurb.BlurbInterface;
 import config.Configuration;
 
 public class BlurbInterfaceTest {
@@ -62,6 +63,14 @@ public class BlurbInterfaceTest {
 		assertTrue(blurb.isBlurb("xyqdxyqdxy"));
 		assertTrue(blurb.isBlurb("xyyyyyyqzxqzxyyyyyqdxyyyyqzx"));
 		
+	}
+	
+	@Test
+	public void testTwoWhozitsInARow() {
+		assertFalse(blurb.isBlurb("xyxyqdx"));
+		assertFalse(blurb.isBlurb("xyqdxyxy"));
+		assertFalse(blurb.isBlurb("xyqdxyqzxxy"));
+		assertFalse(blurb.isBlurb("xyyyyyyqzxqzxyyyyyqdxyyyxyqzx"));	
 	}
 	
 	@Test

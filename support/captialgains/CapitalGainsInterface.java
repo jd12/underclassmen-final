@@ -1,4 +1,4 @@
-package interfaces;
+package captialgains;
 
 
 public interface CapitalGainsInterface {

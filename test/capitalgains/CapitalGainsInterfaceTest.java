@@ -1,10 +1,12 @@
-package interfaces;
+package capitalgains;
 
 import static org.junit.Assert.*;
 
 import org.junit.Before;
 import org.junit.Test;
 
+import captialgains.CapitalGainsInterface;
+import captialgains.NotEnoughStockException;
 import config.Configuration;
 
 public class CapitalGainsInterfaceTest {

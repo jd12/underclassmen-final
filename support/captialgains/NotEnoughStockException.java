@@ -1,4 +1,4 @@
-package interfaces;
+package captialgains;
 
 /**
  * An {@link NotEnoughStock} is thrown when a {@link CapitalGainsInterface} does not

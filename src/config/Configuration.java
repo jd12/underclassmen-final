@@ -1,7 +1,7 @@
 package config;
 
-import interfaces.BlurbInterface;
-import interfaces.CapitalGainsInterface;
+import blurb.BlurbInterface;
+import captialgains.CapitalGainsInterface;
 
 /**
  * This class acts as a configuration file which tells the testing framework

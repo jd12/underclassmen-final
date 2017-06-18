@@ -1,4 +1,4 @@
-package interfaces;
+package blurb;
 public interface BlurbInterface {
 	
 	
