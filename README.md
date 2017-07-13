@@ -26,7 +26,7 @@ Begin by cloning the project and importing it into your workspace.
 
 You should now have a project called UnderclassmenFinal it is very important that you do not rename this project as it is used during the grading process. If the project is renamed, your assignment may not be graded.
 
-By default, your project should have no errors and contain the following root items:
+By default, your project should have no errors and contain the following root items:<br>
 **src** - The source folder where all code you are submitting must go. You can change anything you want in this folder, you can add new files, etc...<br>
 **support** - This folder contains support code that we encourage you to use (and must be used to pass certain tests). You are not allowed to change or add anything in this folder<br>
 **test** - The test folder where all of the public unit tests are available<br>
@@ -36,7 +36,7 @@ By default, your project should have no errors and contain the following root it
 If you are missing any of the above or errors are present in the project, seek help immediately so you can get started on the project right away.
 
 ## Part Two: Create an Alien Language 						
-Implement the BlurbInterface. Both methods must be recursive.
+Implement the `BlurbInterface`. Both methods must be recursive.
 
 **Hints:** 
 - Verifying a blurb might be easier to start with than generating a blurb. It will also make the test cases more helpful.
@@ -53,15 +53,15 @@ Implement the `CapitalGainsInterface` that allows a user to buy and sell stocks 
 
 **Hints:** 
 - It may be helpful to create a class to associate the number of shares with the price (similar to how node associates an element with the pointer to the next node). 
-- One of the more difficult test cases to pass will be multipleBuysMultipleSells. You’ll have to figure out how to take out part of a share while leaving the rest of the shares in their proper place in the queue. This method must run in O(1) time but think about how a helper method might assist you here. 
+- One of the more difficult test cases to pass will be `multipleBuysMultipleSells`. You’ll have to figure out how to take out part of a share while leaving the rest of the shares in their proper place in the queue. This method must run in O(1) time but think about how a helper method might assist you here. 
 
 
 ## Part Four: Create a Dropout Stack 
 **Reminder: COMMIT PART III TO GITHUB BEFORE MOVING ON!!!!!!!!**
 
-In Chapter 3 of L&C, the authors define a class `ArrayStack` that implements their StackADT interface. In this project you will implement a similar class called a dropout stack. A dropout stack is like an ordinary stack except that it has a fixed capacity. When a push would cause the number of elements in the stack to exceed the capacity, the push succeeds as normal but the oldest (bottom) element in the stack is discarded. Remember that conceptually a stack does not have a capacity. In order to ease the writing of test cases, you will define the DropoutStackInterface which will serve as the definition for a dropout stack collection.
+In Chapter 3 of L&C, the authors define a class `ArrayStack` that implements their StackADT interface. In this project you will implement a similar class called a dropout stack. A dropout stack is like an ordinary stack except that it has a fixed capacity. When a push would cause the number of elements in the stack to exceed the capacity, the push succeeds as normal but the oldest (bottom) element in the stack is discarded. Remember that conceptually a stack does not have a capacity. In order to ease the writing of test cases, you will define the `DropoutStackInterface` which will serve as the definition for a dropout stack collection.
 
-In order to implement a dropout stack with an array and maintain O(1) time for all five stack operations, you will need to use a circular array. In a circular array x of capacity k, the first element x[0] is thought of as coming immediately after the last element x[k-1]. As we implement a series of pushes and pops without moving the mass of elements in the array, the "top" and "bottom" locations in the array, representing the top and bottom of the stack, will both move around the array in much the same way that the "top" location moves in ArrayStack. You can see a circular array implementation of a queue in L&C Chapter 5.
+In order to implement a dropout stack with an array and maintain O(1) time for all five stack operations, you will need to use a circular array. In a circular array x of capacity k, the first element x[0] is thought of as coming immediately after the last element x[k-1]. As we implement a series of pushes and pops without moving the mass of elements in the array, the "top" and "bottom" locations in the array, representing the top and bottom of the stack, will both move around the array in much the same way that the "top" location moves in `ArrayStack`. You can see a circular array implementation of a queue in L&C Chapter 5.
 
 Here goes a suggested path(make a commit after each step):
 
@@ -81,6 +81,6 @@ Here goes a suggested path(make a commit after each step):
 
 Bonus: Write a class `DynamicArrayDropoutStack` that extends `ArrayDropoutStack`. This class never discards any elements. When a push would bring it over capacity, it should double its capacity, just as `ArrayStack` does. This class provides the “illusion” of a dropout stack, while keeping all of the history. When its resize method is called, the limits of the (virtual) dropout stack change as you would expect, while the underlying array is unchanged. You will need extra variables to keep track of the dropout “window”. For example, if resize is called and the dropout size enlarges, any old data will appear again. If the dropout size shrinks, the oldest data will “drop off”, but will not be deleted. For full credit in this bonus, you must create test cases that tests this new behavior. 
 
-Part Five: Commit on Github
+## Part Five: Commit on Github
 Make your final commit on Github
 
